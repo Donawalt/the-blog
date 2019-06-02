@@ -51,7 +51,7 @@ html{
   background-color: black;
   color: white;
   header{
-    margin-top: 20px;
+    margin-top: 60px;
     margin-bottom: 20px;
     width: 100%;
     justify-content: center;
@@ -91,7 +91,6 @@ html{
   .content{
     width: 70%;
     margin-left: 15%;
-    min-height: 80vh;
     p{
       color: white;
     }
@@ -101,7 +100,7 @@ html{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 20px;
-    grid-row: 20px;
+    grid-row-gap: 20px;
   }
   footer{
     display: flex;
