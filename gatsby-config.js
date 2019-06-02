@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `THE BLOG `,
     author: `Donaël WALTER`,
-    description: `le blog de donael walter créatif developper et freerunner`,
+    description: `le blog de Donaël Walter développeur créatif, photographe et freerunner`,
     siteUrl: `https://theblog.donaelwalter.com/`,
     social: {
       instagram: `walt_dona`,
