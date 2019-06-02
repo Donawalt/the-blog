@@ -1,11 +1,8 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-
-import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import { rhythm } from '../utils/typography'
-
+import Img from 'gatsby-image'
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
@@ -15,28 +12,31 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="All posts"
+          title="Acceuil"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <Bio />
+        <section id="INDEX-GRID" className="content">
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
+            <div key={node.fields.slug} className="post-card">
+              <Link to={node.fields.slug}>
+              <Img fluid={node.frontmatter.image.childImageSharp.fluid} alt="cover image"/>
+              </Link>
+              <section className="post-card-info">
+              <h3 className="post-card-title"
               >
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>
               <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} className="post-card-excerpt"/>
+              </section>
             </div>
           )
         })}
+        </section>
       </Layout>
     )
   }
@@ -61,6 +61,13 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            image{
+              childImageSharp{
+                fluid(maxWidth:600){
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

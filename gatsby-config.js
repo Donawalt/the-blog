@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog MDX`,
-    author: `Matt Hagner`,
-    description: `An extension of the gatsby starter blog, with support for MDX`,
-    siteUrl: `https://gatsby-starter-blog-mdx-demo.netlify.com/`,
+    title: `THE BLOG `,
+    author: `Donaël WALTER`,
+    description: `le blog de donael walter créatif developper et freerunner`,
+    siteUrl: `https://theblog.donaelwalter.com/`,
     social: {
+      instagram: `walt_dona`,
       twitter: `mattinthecouch`,
     },
   },
@@ -50,6 +51,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -122,8 +124,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `The Blog By Donael`,
+        short_name: `The BLOG`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

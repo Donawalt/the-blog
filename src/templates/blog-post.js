@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import Img from 'gatsby-image'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import { rhythm, scale } from '../utils/typography'
+import '../style/article.scss'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -16,26 +17,21 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
+        <article className="content">
+        <section className="content-header">
+        <Img fluid={post.frontmatter.image.childImageSharp.fluid}/>
         <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
+        <p>
           {post.frontmatter.date}
         </p>
+        </section>
+        <section className="content-content">
         <MDXRenderer>{post.code.body}</MDXRenderer>
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        </section>
+        <hr/>
         <Bio />
 
-        <ul
+        <ul className="nav"
           style={{
             display: `flex`,
             flexWrap: `wrap`,
@@ -59,6 +55,7 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
+        </article>
       </Layout>
     )
   }
@@ -80,6 +77,13 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        image{
+          childImageSharp{
+            fluid(maxWidth:600){
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       code {
         body

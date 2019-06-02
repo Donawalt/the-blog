@@ -16,6 +16,7 @@ function Bio() {
               display: `flex`,
               marginBottom: rhythm(2.5),
             }}
+            className="Bio-Card"
           >
             <Image
               fixed={data.avatar.childImageSharp.fixed}
@@ -28,11 +29,10 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives and works in
-              Minneapolis building silly things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
+              Rédiger par <strong>{author}</strong> étudiants en DUT MMI, développeur web créatif freelance et freerunner.
+              {` `}<br/><br/>
+              <a href={`https://instagram.com/walt_dona/`}>
+                Vous devriez le suivre sur instagram.
               </a>
             </p>
           </div>

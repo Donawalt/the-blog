@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-
-import { rhythm, scale } from '../utils/typography'
+import '../style/layout.scss'
 
 class Layout extends React.Component {
   render() {
@@ -11,45 +10,30 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
+        <header>
         <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
         >
           <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
             to={`/`}
           >
             {title}
           </Link>
         </h1>
+        <h2>by <a href="https://www.donaelwalter.com/">Donaël Walter</a></h2>
+        </header>
       )
     } else {
       header = (
+        <header>
         <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-            marginBottom: rhythm(-1),
-          }}
         >
           <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
             to={`/`}
           >
             {title}
           </Link>
         </h3>
+        </header>
       )
     }
     return (
@@ -57,16 +41,14 @@ class Layout extends React.Component {
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
         {header}
         {children}
         <footer>
           © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          &nbsp;
+          <a href="https://www.gatsbyjs.org">GatsbyJS</a>&nbsp; by &nbsp;<a href="https://www.donaelwalter.com">Donaël WALTER</a>
         </footer>
       </div>
     )

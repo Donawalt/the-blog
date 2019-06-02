@@ -1,0 +1,88 @@
+article{
+  font-family: 'Roboto', sans-serif;
+  .content-header{
+    margin-bottom: 20px;
+    h1{
+      font-size: 44px;
+      color: white;
+      font-weight: bold;
+    }
+    p{
+      color: lightgray;
+    }
+  }
+  .content-content{
+    text-align: justify;
+    a{
+      color: gray;
+      font-weight: bold;
+    }
+    p{
+      margin-bottom: 10px;
+    }
+    h2{
+      margin-top: 20px;
+      font-size: 34px;
+      margin-bottom: 10px;
+      color: white;
+      font-weight: bold;
+    }
+    h3{
+      margin-top: 10px;
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: white;
+      font-weight: bold;
+    }
+    h4{
+      margin-top: 10px;
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: lightgray;
+      font-weight: bold;
+    }
+    h5{
+      margin-top: 10px;
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: white;
+      font-weight: bold;
+    }
+    h6{
+      margin-top: 10px;
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: white;
+      font-weight: bold;
+    }
+    ul,ol{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 20px;
+      margin-left: 40px;
+    }
+      li{
+        color: white;
+        list-style: circle;
+        margin-bottom: 2px;
+      }
+  }
+  .nav{
+    a{
+      color: gray;
+      font-weight: bold;
+    }
+  }
+  .Bio-Card{
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 20px;
+    a{
+      box-shadow: none;
+      font-weight: bold;
+    }
+    p{
+      color: black;
+    }
+  }
+}
