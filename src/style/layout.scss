@@ -117,6 +117,12 @@ html{
   .post-card{
     background-color: #2a292c;
     border-radius: 20px;
+		a:hover {
+			img{
+				transform: scale(1.05) rotate(1deg);
+				transition: 400ms!important;
+			}
+		}
     .post-card-info{
       padding: 20px;
       padding-bottom: 20px;
