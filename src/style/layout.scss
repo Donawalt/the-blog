@@ -61,6 +61,11 @@ html{
       font-size: 8em;
       font-family: sans-serif;
       text-decoration: none;
+			@media screen and (max-width: 730px){
+
+					font-size: 5em;
+
+			}
       a{
         color: white;
         text-decoration: none;
