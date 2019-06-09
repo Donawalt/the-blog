@@ -1,14 +1,19 @@
 article{
   font-family: 'Roboto', sans-serif;
   .content-header{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     h1{
+      margin-top: 10px;
       font-size: 44px;
       color: white;
       font-weight: bold;
     }
     p{
       color: lightgray;
+    }
+
+    .gatsby-image-wrapper{
+      height: 50vh;
     }
   }
   .content-content{
