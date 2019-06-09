@@ -138,7 +138,7 @@ module.exports = {
         short_name: `The BLOG`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#ffffff`,
         display: `fullscreen`,
         icon: `content/assets/dona-icon.png`,
       },
