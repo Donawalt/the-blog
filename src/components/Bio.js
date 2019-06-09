@@ -29,7 +29,7 @@ function Bio() {
               }}
             />
             <p>
-              Rédiger par <strong>{author}</strong> étudiants en DUT MMI, développeur web créatif freelance et freerunner.
+              Rédiger par <strong>{author}</strong> étudiant en DUT MMI, développeur web créatif freelance et freerunner.
               {` `}<br/><br/>
               <a href={`https://instagram.com/walt_dona/`}>
                 Vous devriez le suivre sur instagram.
